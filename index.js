@@ -1,32 +1,38 @@
 let strToEval = "";
 let equations = [];
+let currentMem = 0;
 function evalInput() {
-    strToEval = document.getElementById("inputText").value;
-
+    if (!strToEval) {
+        strToEval = document.getElementById("inputText").value;
+        document.getElementById("inputText").innerText = "Input your equation";
+    }
     output(eval(strToEval));
-    equations.add(strToEval);
-    alert(equations);
-    sessionStorage.setItem("stored", equations)}
-    document.getElementById("testDiv").innerText = getMem();
+    equations.push(strToEval);
+    sessionStorage.setItem("stored", equations)
+    strToEval = "";
+}
+
 
 
 function output(text) {
     let divToOutput = document.getElementById("screenThing");
+    if (text === undefined  ) {
+        text = "N/A"
+    }
     divToOutput.innerText = text;
  
 }
 
 function buttonHandler(c) {
-    strToEval.add(c);
+    strToEval += c;
     output(strToEval);
 }
 
-function inputUp() {}
-function inputDown() {}
-function inputLeft() {
+function inputUp() {
+    output(equations[currentMem--])
 }
-function inputRight() {
-
+function inputDown() {
+    output(equations[currentMem++])
 }
 
 

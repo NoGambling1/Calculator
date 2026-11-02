@@ -13,28 +13,10 @@
     </div>
 <input type="text" id="inputText" placeholder="Input your equation">
 <!--<button onclick="evalInput()" class="funcButton" id="evaluateButton">=</button>-->
-<div id="displayDiv">
-asd
-</div>
-<!--Buttons-->
-<div id="opButtonDiv">
-
-<button onclick="buttonHandler('-')" class="opButton">-</button>
-<button onclick="buttonHandler('*')" class="opButton">*</button>
-<button onclick="buttonHandler('/')" class="opButton">/</button>
-<button onclick="buttonHandler('**')" class="opButton">**</button>
-<button onclick="buttonHandler('%')" class="opButton">%</button>
-<button onclick="evalInput()" class="opButton">=</button>
-    <button onclick="buttonHandler('+')" class="opButton">+</button>
- </div>
-<button onclick="buttonHandler('(')" class="parentheses">(</button>
-<button onclick="buttonHandler(')')" class="parentheses">)</button>
-
-<button onclick="inputUp()" class="opButton">^</button>
-<button onclick="inputDown()" class="opButton">⌄</button>
-<button onclick="inputLeft()" class="opButton"><</button>
-<button onclick="inputRight()" class="opButton">></button>
-
+    <div id="testDiv">
+    </div>
+    <button onclick="buttonHandler('(')" class="parentheses">(</button>
+    <button onclick="buttonHandler(')')" class="parentheses">)</button>
     <div id="numGrid">
 
         <button onclick="buttonHandler(7)" class="numButton">7</button>
@@ -54,11 +36,30 @@ asd
         <button onclick="buttonHandler('.')" class="numButton">.</button>
     </div>
 
+    <!--Buttons-->
+<div id="opButtonDiv">
+    <button class="opButton" id="blankOp"></button>
+    <button onclick="buttonHandler('/')" class="opButton">/</button>
+    <button onclick="buttonHandler('**')" class="opButton">**</button>
+    <button onclick="buttonHandler('*')" class="opButton">*</button>
+    <button onclick="buttonHandler('%')" class="opButton">%</button>
+    <button onclick="buttonHandler('-')" class="opButton">-</button>
+
+
+<button onclick="evalInput()" class="opButton">=</button>
+    <button onclick="buttonHandler('+')" class="opButton">+</button>
+ </div>
+
+
+<button onclick="inputUp()" class="opButton" class="arrow">^</button>
+<button onclick="inputDown()" class="opButton" class="arrow">⌄</button>
+
+
+
 
 <!--Debugging-->
 
-<div id="testDiv">
-</div>
+
 
 <!--Decoration-->
 </div>

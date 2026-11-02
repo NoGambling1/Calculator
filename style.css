@@ -2,10 +2,11 @@
     border: brown;
     height: 20%;
     width: 20%;
+
+
 }
 #background {
     background: #002244;
-    display: inline-block;
     border: brown;
     width: 500px;
     height: 500px;
@@ -16,21 +17,21 @@
 
 }
 #numGrid {
-    scale: 0.5;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 0.1fr);
     grid-auto-rows: auto auto;
-    gap: 40px;
+    gap: 35px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-right: 40%;
     button {
-        width: 100px;
-        height: 100px;
+        background: #d9d9d9;
     }
-    #blankNum {
-        opacity: 0%;
-    }
-
 }
-
+#blankNum {
+    opacity: 0%;
+}
 
 #screen {
     background: #7f9695;
@@ -59,15 +60,26 @@
 .parentheses {
     display: table-row;
     grid-auto-rows: auto auto;
-    margin-bottom: 75%;
+    background: #869397;
+    margin-left: 50px;
 }
+.arrow {
+    background: #5c7077;
 
+}
 #opButtonDiv {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 0.15fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 16px;
-
+    margin-left: 345px;
+    margin-top: -70%;
+    button {
+        background: #869397;
+    }
+}
+#blankOp {
+    opacity: 0%;
 }
 button {
     height: 50px;
