@@ -6,12 +6,65 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
 </head>
-<body>
+<body onload="pageLoad()">
+<div id="background">
+    <div id="screen">
+        <p id="screenThing">asd</p>
+    </div>
 <input type="text" id="inputText" placeholder="Input your equation">
-<button onclick="evaluate()" class="funcButton" id="evaluateButton">=</button>
-<!--<div id="displayDiv">-->
-<!--asd-->
-<!--</div>-->
+<!--<button onclick="evalInput()" class="funcButton" id="evaluateButton">=</button>-->
+<div id="displayDiv">
+asd
+</div>
+<!--Buttons-->
+<div id="opButtonDiv">
+
+<button onclick="buttonHandler('-')" class="opButton">-</button>
+<button onclick="buttonHandler('*')" class="opButton">*</button>
+<button onclick="buttonHandler('/')" class="opButton">/</button>
+<button onclick="buttonHandler('**')" class="opButton">**</button>
+<button onclick="buttonHandler('%')" class="opButton">%</button>
+<button onclick="evalInput()" class="opButton">=</button>
+    <button onclick="buttonHandler('+')" class="opButton">+</button>
+ </div>
+<button onclick="buttonHandler('(')" class="parentheses">(</button>
+<button onclick="buttonHandler(')')" class="parentheses">)</button>
+
+<button onclick="inputUp()" class="opButton">^</button>
+<button onclick="inputDown()" class="opButton">⌄</button>
+<button onclick="inputLeft()" class="opButton"><</button>
+<button onclick="inputRight()" class="opButton">></button>
+
+    <div id="numGrid">
+
+        <button onclick="buttonHandler(7)" class="numButton">7</button>
+        <button onclick="buttonHandler(8)" class="numButton">8</button>
+        <button onclick="buttonHandler(9)" class="numButton">9</button>
+
+        <button onclick="buttonHandler(4)" class="numButton">4</button>
+        <button onclick="buttonHandler(5)" class="numButton">5</button>
+        <button onclick="buttonHandler(6)" class="numButton">6</button>
+
+        <button onclick="buttonHandler(1)" class="numButton">1</button>
+        <button onclick="buttonHandler(2)" class="numButton">2</button>
+        <button onclick="buttonHandler(3)" class="numButton">3</button>
+
+        <button class="numButton" id="blankNum"></button>
+        <button onclick="buttonHandler(0)" class="numButton">0</button>
+        <button onclick="buttonHandler('.')" class="numButton">.</button>
+    </div>
+
+
+<!--Debugging-->
+
+<div id="testDiv">
+</div>
+
+<!--Decoration-->
+</div>
+
 </body>
+
+
 </html>
 <!--Textbox, evaluate, and screen-->
